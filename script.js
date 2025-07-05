@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tracks.length === 0) return;
         
         const track = tracks[index];
-        audioPlayer.src = `music/${track.file}`;
+        audioPlayer.src = track.file;
         songTitleEl.textContent = track.title;
         songArtistEl.textContent = track.artist;
         coverEl.src = track.cover || 'https://via.placeholder.com/300';
