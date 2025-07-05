@@ -1,0 +1,7 @@
+tunnel: YOUR_TUNNEL_UUID
+credentials-file: /home/xsaz/.cloudflared/YOUR_TUNNEL_UUID.json
+
+ingress:
+  - hostname: player.yourdomain.com  # Замените на ваш поддомен
+    service: http://localhost:7345   # Ваш локальный сервер (Python/Node.js)
+  - service: http_status:404         # Блокировать всё остальное

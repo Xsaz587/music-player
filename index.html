@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный проигрыватель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div class="player-container">
+        <h1>Музыкальный проигрыватель</h1>
+        
+        <div class="theme-switcher">
+            <button id="theme-toggle">Темная тема</button>
+        </div>
+        
+        <div class="player">
+            <div class="cover-wrapper">
+                <div class="cover-aura"></div>
+                <div class="cover-container">
+                    <img id="cover" src="https://via.placeholder.com/300" alt="Обложка">
+                </div>
+            </div>
+            
+            <div class="info">
+                <h2 id="song-title">Название трека</h2>
+                <p id="song-artist">Исполнитель</p>
+            </div>
+            
+            <audio id="audio-player"></audio>
+            
+            <div class="controls">
+                <button id="prev-btn">⏮</button>
+                <button id="play-btn">▶</button>
+                <button id="next-btn">⏭</button>
+                <button id="loop-btn">🔁 (выкл)</button>
+            </div>
+            
+            <div class="progress-container">
+                <input type="range" id="progress-bar" min="0" max="100" value="0">
+                <div class="time">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            
+            <div class="volume-container">
+                <span>🔈</span>
+                <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.7">
+                <span>🔊</span>
+            </div>
+        </div>
+        
+        <div class="playlist-container">
+            <h3>Плейлист</h3>
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
